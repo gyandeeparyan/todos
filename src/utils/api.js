@@ -1,7 +1,7 @@
 export const getTodos = async () => {
   try {
     const response = await fetch(
-      `${process.env.API_URL}`,
+      `https://6943845a69b12460f314dfab.mockapi.io/training/todos`,
       {
         method: "GET",
         cache: "no-cache",
@@ -19,7 +19,7 @@ export const getTodos = async () => {
 export const getbyIDTodos = async (id) => {
   try {
     const response = await fetch(
-      `${process.env.API_URL}/${id}`,
+      `https://6943845a69b12460f314dfab.mockapi.io/training/todos/${id}`,
       {
         method: "GET",
         cache: "no-cache",
@@ -39,11 +39,15 @@ export const getbyIDTodos = async (id) => {
 export const createTodos = async (payload) => {
   try {
     const response = await fetch(
-      `${process.env.API_URL}`,
+      `https://6943845a69b12460f314dfab.mockapi.io/training/todos`,
+
       {
         method: "POST",
         cache: "no-cache",
-        body: payload,
+        body: JSON.stringify(payload),
+        headers: {
+  "Content-Type": "application/json",
+}
       }
     );
 
@@ -57,11 +61,14 @@ export const createTodos = async (payload) => {
 export const updateTodos = async (id, payload) => {
   try {
     const response = await fetch(
-      `${process.env.API_URL}/${id}`,
+      `https://6943845a69b12460f314dfab.mockapi.io/training/todos/${id}`,
       {
         method: "PUT",
         cache: "no-cache",
-        body: payload,
+        body: JSON.stringify(payload),
+        headers: {
+  "Content-Type": "application/json",
+}
       }
     );
 
@@ -75,7 +82,7 @@ export const updateTodos = async (id, payload) => {
 export const deleteTodos = async (id) => {
   try {
     const response = await fetch(
-      `${process.env.API_URL}/${id}`,
+      `https://6943845a69b12460f314dfab.mockapi.io/training/todos/${id}`,
       {
         method: "DELETE",
         cache: "no-cache",
