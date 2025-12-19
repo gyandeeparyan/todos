@@ -127,7 +127,7 @@ const Container = ({ todolist }) => {
                         <span className={`px-2 py-1 rounded text-[10px] font-bold uppercase tracking-tighter border ${
                           list?.completed 
                           ? 'bg-emerald-900/30 text-emerald-400 border-emerald-800/50' 
-                          : 'bg-amber-900/30 text-amber-400 border-amber-800/50'
+                          : 'bg-amber-900/30 animate-pulse text-amber-400 border-amber-800/50'
                         }`}>
                           {list?.completed ? 'Completed' : 'Pending'}
                         </span>

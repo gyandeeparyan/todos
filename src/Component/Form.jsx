@@ -37,7 +37,7 @@ const EditForm = ({ editData, onGoBack }) => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-[60vh] py-12">
+    <div className="flex flex-col items-center justify-center min-h-[60vh] md:-12">
       {/* Form Card */}
       <div className="w-full max-w-lg bg-stone-800/50 border border-stone-700 md:p-8 rounded-2xl shadow-2xl backdrop-blur-sm">
         
