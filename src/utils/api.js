@@ -1,7 +1,7 @@
 export const getTodos = async () => {
   try {
     const response = await fetch(
-      `https://6943845a69b12460f314dfab.mockapi.io/training/todos`,
+      `${process.env.API_URL}`,
       {
         method: "GET",
         cache: "no-cache",
@@ -19,7 +19,7 @@ export const getTodos = async () => {
 export const getbyIDTodos = async (id) => {
   try {
     const response = await fetch(
-      `https://6943845a69b12460f314dfab.mockapi.io/training/todos/${id}`,
+      `${process.env.API_URL}/${id}`,
       {
         method: "GET",
         cache: "no-cache",
@@ -39,7 +39,7 @@ export const getbyIDTodos = async (id) => {
 export const createTodos = async (payload) => {
   try {
     const response = await fetch(
-      `https://6943845a69b12460f314dfab.mockapi.io/training/todos`,
+      `${process.env.API_URL}`,
       {
         method: "POST",
         cache: "no-cache",
@@ -57,7 +57,7 @@ export const createTodos = async (payload) => {
 export const updateTodos = async (id, payload) => {
   try {
     const response = await fetch(
-      `https://6943845a69b12460f314dfab.mockapi.io/training/todos/${id}`,
+      `${process.env.API_URL}/${id}`,
       {
         method: "PUT",
         cache: "no-cache",
@@ -75,7 +75,7 @@ export const updateTodos = async (id, payload) => {
 export const deleteTodos = async (id) => {
   try {
     const response = await fetch(
-      `https://6943845a69b12460f314dfab.mockapi.io/training/todos/${id}`,
+      `${process.env.API_URL}/${id}`,
       {
         method: "DELETE",
         cache: "no-cache",
