@@ -124,7 +124,7 @@ const Container = ({ todolist }) => {
                       {/* Description */}
                       <p className="col-span-3 flex justify-between md:block text-stone-400 italic">
                         <span className="md:hidden font-bold text-stone-500 ">Desc:</span>
-                        <span className="line-clamp-1">{list?.description}</span>
+                        <span className={`line-clamp-1 ${list.completed ? 'text-stone-500 line-through' : 'text-stone-200'}`}>{list?.description}</span>
                       </p>
 
                       {/* Status Badge */}
