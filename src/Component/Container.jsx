@@ -56,7 +56,7 @@ const Container = ({ todolist }) => {
       <div className="max-w-7xl mx-auto">
         
         {/* Header */}
-        <div className="flex justify-between items-center mb-2">
+        <div className="flex flex-col md:flex-row justify-between items-center mb-2">
           <h1 className="text-2xl font-bold text-stone-100 uppercase ">TODO MANAGEMENT</h1>
           {view === 'list' && (
             <button 
