@@ -18,6 +18,12 @@ const Container = ({ todolist }) => {
     setView('edit');
   };
 
+//   const handleCreateState=() => {
+//     setTodoData((prev) => 
+//       ...prev,  item)
+//     );
+//   }
+
   const handleDelete = async (id) => {
     await deleteTodos(id);
     setTodoData((prev) => prev.filter((item) => item.id !== id));
@@ -56,7 +62,7 @@ const Container = ({ todolist }) => {
       <div className="max-w-7xl mx-auto">
         
         {/* Header */}
-        <div className="flex flex-col md:flex-row justify-between items-center mb-2">
+        <div className="flex flex-col gap-4 md:flex-row justify-between items-center mb-2">
           <h1 className="text-2xl font-bold text-stone-100 uppercase ">TODO MANAGEMENT</h1>
           {view === 'list' && (
             <button 
@@ -76,10 +82,10 @@ const Container = ({ todolist }) => {
           </button>
         )}
 
-        <div className=" rounded-xl border border-stone-800 shadow-xl overflow-hidden relative">
+        <div className=" rounded-xl md:border md:border-stone-800 shadow-xl overflow-hidden relative">
           
-          {view === 'create' && <div className="p-6 text-stone-100"><CreateForm onGoBack={handleGoBack} /></div>}
-          {view === 'edit' && <div className="p-6 text-stone-100"><EditForm editData={editData} todolist={todolist} onGoBack={handleGoBack} /></div>}
+          {view === 'create' && <div className="md:p-6 text-stone-100"><CreateForm  onGoBack={handleGoBack} /></div>}
+          {view === 'edit' && <div className="md:p-6 text-stone-100"><EditForm editData={editData} todolist={todolist} onGoBack={handleGoBack} /></div>}
 
           {view === 'list' && (
             <div className="w-full text-sm text-stone-300">

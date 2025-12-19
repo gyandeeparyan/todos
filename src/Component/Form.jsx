@@ -20,6 +20,7 @@ const EditForm = ({ editData, onGoBack }) => {
   };
 
   const handleSaveData = async () => {
+
     const payload = {
       ...editDetails,
       id: Number(editDetails.id),
@@ -30,6 +31,7 @@ const EditForm = ({ editData, onGoBack }) => {
     try {
       const result = await updateTodos(editDetails.id, payload);
       console.log("Update Success:", result);
+
       if (onGoBack) onGoBack(); 
     } catch (error) {
       console.error("Update Failed:", error);
@@ -37,9 +39,9 @@ const EditForm = ({ editData, onGoBack }) => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-[60vh] md:-12">
+    <div className="flex flex-col items-center justify-center  min-h-[60vh] md:p-12">
       {/* Form Card */}
-      <div className="w-full max-w-lg bg-stone-800/50 border border-stone-700 md:p-8 rounded-2xl shadow-2xl backdrop-blur-sm">
+      <div className="w-full max-w-lg bg-stone-800/50 border border-stone-700  p-8 rounded-2xl shadow-2xl backdrop-blur-sm">
         
         <div className="mb-8">
           <div className="flex items-center gap-3">

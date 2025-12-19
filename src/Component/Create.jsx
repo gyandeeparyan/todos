@@ -34,6 +34,7 @@ const CreateForm = ({ onGoBack }) => {
     try {
       const result = await createTodos(payload);
       console.log("Success:", result);
+    
       if(onGoBack) onGoBack(); 
     } catch (error) {
       console.error("Error creating todo:", error);
