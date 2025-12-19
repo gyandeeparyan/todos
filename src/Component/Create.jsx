@@ -31,6 +31,12 @@ const CreateForm = ({ onGoBack }) => {
       completed: false,
     };
 
+    //validations
+   if(!editDetails.title.trim() || !editDetails.description.trim()){
+      alert("Title and Description cannot be empty.");
+      return;
+    }
+
     try {
       const result = await createTodos(payload);
       console.log("Success:", result);

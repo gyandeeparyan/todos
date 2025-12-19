@@ -20,7 +20,11 @@ const EditForm = ({ editData, onGoBack }) => {
   };
 
   const handleSaveData = async () => {
-
+    //validations
+    if(!editDetails.title.trim() || !editDetails.description.trim()){
+      alert("Title and Description cannot be empty.");
+      return;
+    }
     const payload = {
       ...editDetails,
       id: Number(editDetails.id),
