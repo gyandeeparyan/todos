@@ -32,10 +32,19 @@ const CreateForm = ({ onGoBack }) => {
     };
 
     //validations
-   if(!editDetails.title.trim() || !editDetails.description.trim()){
-      alert("Title and Description cannot be empty.");
-      return;
-    }
+   if (editDetails.title.trim() === "") {
+    alert("Title cannot be empty!");
+    return
+} 
+ if (editDetails.description.trim() === "") {
+    alert("Description cannot be empty!");
+    return
+} 
+ if (isNaN(editDetails.userId) || editDetails.userId <= 0) {
+    alert("Please provide a valid User ID number!");
+    return
+} 
+
 
     try {
       const result = await createTodos(payload);
