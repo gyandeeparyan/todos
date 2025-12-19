@@ -35,6 +35,7 @@ const EditForm = ({ editData, onGoBack }) => {
     try {
       const result = await updateTodos(editDetails.id, payload);
       console.log("Update Success:", result);
+      if(result) window.location.reload()
 
       if (onGoBack) onGoBack(); 
     } catch (error) {
