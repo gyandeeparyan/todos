@@ -13,7 +13,7 @@ const Todo = async()=>{
     }
     return (
         <>
-        <div className='px-4 md:px-8'>
+        <div className='px-2 md:px-8'>
 
         <Container todolist={todolist}/>
         </div>
